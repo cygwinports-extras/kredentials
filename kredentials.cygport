@@ -1,0 +1,13 @@
+inherit kde4
+
+NAME="kredentials"
+VERSION=2.0-pre3
+RELEASE=1
+CATEGORY="Net"
+SUMMARY="KDE Kerberos tray applet"
+DESCRIPTION="Kredentials is a small applet for maintaining Kerberos tickets for
+the duration of their renewable lifetime. It can also optionally keep AFS tokens
+up-to-date."
+HOMEPAGE="http://people.csail.mit.edu/noahm/kredentials/"
+SRC_URI="http://people.csail.mit.edu/noahm/kredentials/${VERSION%-*}/${NAME}-${VERSION}.tar.bz2"
+PATCH_URI="2.0-cygwin-compile.patch"

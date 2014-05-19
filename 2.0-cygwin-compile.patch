@@ -1,0 +1,15 @@
+krb5_wrap.cpp: In member function ‘std::string krb5::tixmgr::readPass(int)’:
+krb5_wrap.cpp:408:14: error: ‘dup’ was not declared in this scope
+krb5_wrap.cpp: In member function ‘virtual krb5::principal* krb5::tixmgr::osPrincipal()’:
+krb5_wrap.cpp:631:34: error: ‘getuid’ was not declared in this scope
+
+--- origsrc/kredentials-2.0-pre3/src/krb5_wrap.cpp	2012-01-29 13:48:23.000000000 -0600
++++ src/kredentials-2.0-pre3/src/krb5_wrap.cpp	2014-05-19 18:32:34.466192400 -0500
+@@ -28,6 +28,7 @@
+ #include <memory>
+ #include <termios.h>
+ #include <pwd.h>
++#include <unistd.h>
+ 
+ #ifndef NDEBUG
+   #define LOG kDebug()
